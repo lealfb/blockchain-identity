@@ -1,7 +1,5 @@
 # Identidade Blockchain
 
-<img src="http://www.infoescola.com/wp-content/uploads/2014/04/unb.jpg" width="100"/>
-
 ## Passo 1 - Gravando uma transação na Blockchain com Javascript.
 <br/>
 Utilizou-se o framework Ethereum, disponível em https://www.ethereum.org, em conjunto com o framework Truffle, disponível em https://www.npmjs.com/package/truffle, um pipeline de ambiente de desenvolvimento e estrutura de testes para quem quer utilizar o Ethereum para suas transações em Blockchain.
