@@ -1,16 +1,7 @@
-/* UNB
-   Mestrado em Computacao Aplicada - Engenharia de Software
-   Disciplina: Construcao de software
-   Prof.: Alexandre Gomes
-   Aluno: Alan S. C. Mazuco 
-   11/Jun/2016 
-*/
-
 var accounts;
 var account;
 var balance;
 var logFront;
-
 
 function setStatus(message) {
     var status = document.getElementById("status");
@@ -26,10 +17,9 @@ function refreshBalance() {
 
 function sendCoin() {
 
-    /* capturando os valores da tela e envaindo ao blockchain para gravacao.
-       ...o " pulo do gato", que realmente interessa para o sucesso da App.*/
-    var meta = MetaCoin.deployed();
-    var amount = parseInt(document.getElementById("amount").value);
+    /*Captura os valores da tela e envia ao blockchain para gravacao. */
+    var meta     = MetaCoin.deployed();
+    var amount   = parseInt(document.getElementById("amount").value);
     var receiver = document.getElementById("receiver").value;
 
     //Atualizacao momentanea via Ajax...
@@ -37,7 +27,7 @@ function sendCoin() {
 
     meta.sendCoin(receiver, amount, {from: account}).then(function() {
         
-        setStatus("Transacao completada!");
+    setStatus("Transacao concluída!");
     
         /*
            Ateh aqui, o codigo cumpre com a solicitacao do professor:
@@ -50,20 +40,19 @@ function sendCoin() {
         //Atualiza a tela
         refreshBalance();
 	
-
-        }).catch(function(e) {
+	}).catch(function(e) {
             console.log(e);    
         });
      };
 
     window.onload = function() {
-        web3.eth.getAccounts(function(err, accs) {
-            if (err != null) {
+    	web3.eth.getAccounts(function(err, accs) {
+            if(err != null) {
                 alert("Houve um erro ao buscar suas contas.");
                 return;
             }
 
-        if (accs.length == 0) {
+        if(accs.length == 0) {
              alert("Não foi possível obter quaisquer contas! Verifique se o seu cliente Ethereum está configurado corretamente.");
             return;
         }
