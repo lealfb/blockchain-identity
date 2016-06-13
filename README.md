@@ -1,10 +1,10 @@
 # Identidade Blockchain
 
-## Passo 1 - Gravando uma transação na Blockchain com Javascript.
+## Passo 1 - Gravando na Blockchain com Javascript.
 <br/>
 Utilizou-se o framework Ethereum, disponível em https://www.ethereum.org, em conjunto com o framework Truffle, disponível em https://www.npmjs.com/package/truffle, um pipeline de ambiente de desenvolvimento e estrutura de testes para quem quer utilizar o Ethereum para suas transações em Blockchain.
 
-Estávamos desde o início trabalhando com o Ethereum, mas não tínhamos moeda para realizar uma transação. E foi assim que decidimos utilizar uma ferramenta de desenvolvimento para o Ethereum, a **Truffle**. Então, se não podemos gravar na Blockchain sem moeda, CRIAMOS NOSSO PRÓPRIO SERVIDOR DE BLOCKCHAIN.
+Com a ferramenta de desenvolvimento para o Ethereum, a **Truffle** criamos nosso SERVIDOR DE BLOCKCHAIN.
 
 O tutorial é específico para Linux/Ubuntu, mas você poderá fazer isto utilizando uma máquina virtual em seu Windows. Se esse for o seu caso, baixe o VM-WARE (www.vmware.com) e crie uma VM novinha em folha do último ubuntu em seu sistema operacional Windows. Com esse ubuntu zero-bala é só seguir o passo-a-passo.
 
@@ -51,7 +51,7 @@ Tudo pronto? Então vamos lá, primeiro tem de colocar o servidor para rodar. Di
 testrpc 
 ```
 Verifique que o servidor está rodando na porta 8545.<br/>
-<img src="http://ap.imagensbrasil.org/images/servidor-blockchain.jpg" width="500"/><br/>
+<img src="http://ap.imagensbrasil.org/images/blockchain-fig1.png" width="500" />
 Figura 1 - O servidor de blockchain em funcionamento.
 <br/><br/>
 ##### Passo 5) CRIAR A APP DE TESTE
@@ -62,8 +62,8 @@ cd myApp  //entra dentro da pasta home/myApp.
 truflle init  //cria a app a partir de um modelo disponibilizado no git pela Ethereum.
 ```
 Após a criação com sucesso, abra o explorador de arquivos e confirme que o projeto foi criado.<br/>
-<img src="http://ap.imagensbrasil.org/images/blockchain-fig2.jpg" width="500"/><br/>
-Figura 2 - A App foi criada na pasta home/minhaApp.
+<img src="http://ap.imagensbrasil.org/images/blockchain-identity_pasta_home.png" width="500" /><br/>
+Figura 2 - A App foi criada na pasta home/identityApp/blockchain-identity.
 <br/><br/>
 ##### Passo 6) TESTAR A APP NO TERMINAL
 Em seguida, no terminal, faça... (não se esqueça de verificar se o servidor blockchain está rodando em outro terminal, conforme a figura 1)
@@ -72,38 +72,31 @@ truffle compile //isto compila os contratos
 truffle deploy //roda a app no servidor (rodando e já salvando uma transação)
 ```
 Pronto, verifique que uma transação foi gravada na blockchain da sua máquina. Verifique o hash , o mesmo hash pode ser visto também no terminal que está executando o servidor. Figuras 3 e 4.
-<img src="http://ap.imagensbrasil.org/images/blockchain-fig3.jpg" width="400"/><br/>
+<img src="http://ap.imagensbrasil.org/images/blockchain-truffle-deploy.png" width="400"/><br/>
 Figura 3 - Testando com a app-terminal. Observe a transação gravada.
 <br/><br/>
-<img src="http://ap.imagensbrasil.org/images/blockchain-fig4.jpg" width="400"/><br/>
+<img src="http://ap.imagensbrasil.org/images/blockchain_test_transacao.png" width="400"/><br/>
 Figura 4 - O servidor responde ao teste com uma gravação da transação.
 <br/>
-
-Até este ponto, exceto a configuração do servidor, você pode acompanhar pelo video-tutorial do Carlos Magno, também aluno do Mestrado em Computação Aplicada da UNB, <a href="https://drive.google.com/file/d/0B67MpBEz0bVlVFJuZGJGMlRIUXM/view?usp=sharing">
-aqui
-</a>.
-<br/><br/>
+<br/>
 ##### Passo 7) CONFIGURAR A APP WEB
-<img src="http://ap.imagensbrasil.org/images/blockchain-fig-5.md.jpg" width="400"/><br/>
-Figura 5 - A app web: autenticação de log por meio da Blockchain.
+<img src="http://ap.imagensbrasil.org/images/bem_vindo_a_blockchain.png" width="400" /><br/>
+Figura 5.0 - Identidade Blockchain - Boas Vindas
+
+<img src="http://ap.imagensbrasil.org/images/crie_seu_perfil.png"        width="400" /><br/>
+Figura 5.1 - Identidade Blockchain - Crie seu Perfil
+
+<img src="http://ap.imagensbrasil.org/images/identidade_blockchain.png"  width="400" /><br/>
+Figura 5.2 - Identidade Blockchain - Envio da Transação
 <br/>
 
-A finalidade da app web (Dapp) é aproveitar os recursos da Blockchain para atestar a veracidade das informações geradas. Assim, por meio dela, pode-se, por exemplo, autenticar os logs de uma aplicação. Esta, por sinal, é a finalidade deste aplicativo.<br/>
-Depois de ter executado os passos 1 a 6, foi criado um servidor de blockchain na sua máquina. Vamos aproveitar esse servidor. Siga as etapas a seguir...
+A finalidade da Aplicação é criar uma Identidade e um Perfil na Blockchain.
 <br/><br/>
 Navegar no projeto até o arquivo **app.js**, que está dentro da pasta app/javascripts, 
 veja a figura 2. Abra este arquivo com o Gedit. Apague tudo o que tem dentro dele e escreva o código abaixo. Você pode fazer as adaptações necessárias ao seu projeto
 
 
 ```javascript
-/* UNB
-   Mestrado em Computacao Aplicada - Engenharia de Software
-   Disciplina: Construcao de software
-   Prof.: Alexandre Gomes
-   Aluno: Alan S. C. Mazuco 
-   11/Jun/2016 
-*/
-​
 var accounts;
 var account;
 var balance;
@@ -241,12 +234,12 @@ Perceba também, que a cada clique é gravada uma nova transação no servidor d
 O Bitcoin (ou ether - ou a moeda, como queira)  vai sendo incrementada de 100, para cada clique, mas está em um campo oculto, isto é uma das características da app, que não importa a moeda, mas sim, utilizar as ferramentas do blockchain para o proveito da aplicação.
 
 Abaixo, podemos ver as transações que ocorrem no servidor a cada clique:<br/>
-<img src="http://ap.imagensbrasil.org/images/blockchain-final-1.jpg" width="400"/><br/>
+
+<img src="http://ap.imagensbrasil.org/images/gravacao_blockchain.png" width="400" /><br/>
 Figura 6 - A app web: A cada clique no botão "Send" grava uma transação na blockchain e envia o log para ser autenticado.
 
-<img src="http://ap.imagensbrasil.org/images/blockchain-final-3.jpg" width="400"/><br/>
+<img src="http://ap.imagensbrasil.org/images/gravando_blockchain_2.png" width="400" /><br/>
 Figura 7 - A app web: Após o clique no botão "Send", podemos visualizar a transação sendo gravada no servidor da blockchain.
-
 
  
 ## Finalizando 
