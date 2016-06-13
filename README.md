@@ -1,6 +1,6 @@
-# Identidade Blockchain
+<img src="http://ap.imagensbrasil.org/images/identidade_blockchain.png"  width="400" />
 
-## Passo 1 - Gravando na Blockchain com Javascript.
+## Identidade Blockchain.
 <br/>
 Utilizou-se o framework Ethereum, disponível em https://www.ethereum.org, em conjunto com o framework Truffle, disponível em https://www.npmjs.com/package/truffle, um pipeline de ambiente de desenvolvimento e estrutura de testes para quem quer utilizar o Ethereum para suas transações em Blockchain.
 
@@ -51,7 +51,7 @@ Tudo pronto? Então vamos lá, primeiro tem de colocar o servidor para rodar. Di
 testrpc 
 ```
 Verifique que o servidor está rodando na porta 8545.<br/>
-<img src="http://ap.imagensbrasil.org/images/blockchain-fig1.png" width="500" />
+<img src="http://ap.imagensbrasil.org/images/blockchain-fig1.png" width="500" /><br/>
 Figura 1 - O servidor de blockchain em funcionamento.
 <br/><br/>
 ##### Passo 5) CRIAR A APP DE TESTE
