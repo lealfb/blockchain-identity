@@ -1,5 +1,4 @@
-<img src="http://ap.imagensbrasil.org/images/identidade_blockchain.png" align="center" width="400" />
-<br/>
+<div style="text-align:center"><img src="http://ap.imagensbrasil.org/images/identidade_blockchain.png" width="400" /><br/>
 Utilizou-se o framework Ethereum, disponível em https://www.ethereum.org, em conjunto com o framework Truffle, disponível em https://www.npmjs.com/package/truffle, um pipeline de ambiente de desenvolvimento e estrutura de testes para quem quer utilizar o Ethereum para suas transações em Blockchain.
 
 Com a ferramenta de desenvolvimento para o Ethereum, a **Truffle** criamos nosso SERVIDOR DE BLOCKCHAIN.
