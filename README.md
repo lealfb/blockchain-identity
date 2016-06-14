@@ -1,12 +1,8 @@
-# Blockchain com Javascript
+# Identidade Blockchain
 
-<img src="http://www.infoescola.com/wp-content/uploads/2014/04/unb.jpg" width="100"/>
-
-A seguir um script simples para escrever uma transação na Blockchain com Javascript.
+## Passo 1 - Gravando uma transação na Blockchain com Javascript.
 <br/>
 Utilizou-se o framework Ethereum, disponível em https://www.ethereum.org, em conjunto com o framework Truffle, disponível em https://www.npmjs.com/package/truffle, um pipeline de ambiente de desenvolvimento e estrutura de testes para quem quer utilizar o Ethereum para suas transações em Blockchain.
-
-O presente trabalho integrou a disciplina Construção de Software do Mestrado em Computação Aplicada - Engenharia de Software da Universidade de Brasília UNB, e deixa disponível para a comunidade uma forma de implemantação em caso real de forma simples mas eficiente.
 
 Estávamos desde o início trabalhando com o Ethereum, mas não tínhamos moeda para realizar uma transação. E foi assim que decidimos utilizar uma ferramenta de desenvolvimento para o Ethereum, a **Truffle**. Então, se não podemos gravar na Blockchain sem moeda, CRIAMOS NOSSO PRÓPRIO SERVIDOR DE BLOCKCHAIN.
 
@@ -258,4 +254,4 @@ Este passos possibilitaram a escrita da transação na Blockchain. Simples adapt
 <br/>
 Disciplina: Construção de Software <br />
 Professor: Alexandre Gomes <br />
-Aluno: Alan Mazuco 
+Aluno: Fábio Leal 
